@@ -3,9 +3,10 @@
     "browser": true,
     "es2021": true
   },
-  "parser": "babel-eslint",
-  "extends": ["react-app", "airbnb", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "extends": ["react-app", "prettier", "airbnb"],
   "parserOptions": {
+    "requireConfigFile": false,
     "ecmaFeatures": {
       "jsx": true
     },
@@ -22,8 +23,8 @@
     }
   ],
   "rules": {
-    "prettier/prettier": "warn",
     "lines-between-class-members": "off",
+    "prettier/prettier": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/state-in-constructor": "off",
     "react/react-in-jsx-scope": "off",
