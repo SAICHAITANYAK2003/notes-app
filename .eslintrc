@@ -3,10 +3,9 @@
     "browser": true,
     "es2021": true
   },
-  "parser": "@babel/eslint-parser",
-  "extends": ["react-app", "prettier", "airbnb"],
+  "parser": "babel-eslint",
+  "extends": ["react-app", "plugin:prettier/recommended"],
   "parserOptions": {
-    "requireConfigFile": false,
     "ecmaFeatures": {
       "jsx": true
     },
@@ -23,8 +22,12 @@
     }
   ],
   "rules": {
-    "lines-between-class-members": "off",
     "prettier/prettier": "warn",
+    "semi": "warn",
+    "object-curly-spacing": ["warn", "always"],
+    "arrow-parens": ["warn", "always"],
+    "import/newline-after-import": "warn",
+    "lines-between-class-members": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/state-in-constructor": "off",
     "react/react-in-jsx-scope": "off",
@@ -32,24 +35,14 @@
     "no-console": "off",
     "react/prop-types": "off",
     "jsx-a11y/label-has-associated-control": [
-      2,
+      1,
       {
         "labelAttributes": ["htmlFor"]
       }
     ],
     "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": [
-      "off",
-      {
-        "handlers": ["onClick"]
-      }
-    ],
-    "react/prefer-stateless-function": [
-      0,
-      {
-        "ignorePureComponents": true
-      }
-    ],
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "react/prefer-stateless-function": 0,
     "no-unused-vars": "warn",
     "jsx-a11y/alt-text": 1,
     "react/no-unused-state": "warn",
